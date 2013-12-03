@@ -1,0 +1,59 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SelectSourceType$DummySectionFragment" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
+
+        <ImageButton
+            android:id="@+id/others_blogBtn"
+            android:layout_width="245dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/longothersblog" />
+        
+        <ImageButton
+            android:id="@+id/others_onlinediscussionBtn"
+            android:layout_width="245dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/longothersdiscussion" />
+        
+        <ImageButton
+            android:id="@+id/others_podcastBtn"
+            android:layout_width="245dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/longotherspodcasts" />
+        
+        <ImageButton
+            android:id="@+id/others_interviewBtn"
+            android:layout_width="245dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/longothersinterview" />
+        
+       </LinearLayout>
+
+</ScrollView>
