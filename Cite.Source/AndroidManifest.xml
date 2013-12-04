@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gsm.cite.source"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <!-- ********************************************************************************** -->
+    	<!-- THIS IS FOR THE ACTIVITIES REGARDING THE START SCREEN -->
+    	<!-- ********************************************************************************** -->
+        
+		        <activity
+		            android:name="startscreenpackage.StartScreenActivity"
+		            android:label="@string/app_name" >
+		            <intent-filter>
+		                <action android:name="android.intent.action.MAIN" />
+		
+		                <category android:name="android.intent.category.LAUNCHER" />
+		            </intent-filter>
+		        </activity>
+        
+        <!-- ********************************************************************************** -->
+
+    	<!-- ********************************************************************************** -->
+    	<!-- THIS IS FOR THE ACTIVITIES REGARDING THE SOURCE SELECTION AND ACTUAL SOURCES -->
+    	<!-- ********************************************************************************** -->
+
+		        <activity
+		            android:name="sourcepackage.SelectSourceType"
+		            android:label="@string/app_name" >
+	           <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->	
+		        </activity>
+		        
+		        <activity
+		            android:name="sourcepackage.SourceDocBook"
+		            android:label="@string/app_name" >
+		       <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+		        
+		        <activity
+		            android:name="sourcepackage.SourceDocWeb"
+		            android:label="@string/app_name" >
+		       <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+		        
+		        <activity
+		            android:name="sourcepackage.SourceDocAcademic"
+		            android:label="@string/app_name" >
+		      <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+		        
+		        <activity
+		            android:name="sourcepackage.SourceDocConference"
+		            android:label="@string/app_name" >
+		      <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+		        
+		        <activity
+		            android:name="sourcepackage.SourcePubJournal"
+		            android:label="@string/app_name" >
+		       <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->    
+		        </activity>
+		        
+		        <activity
+		            android:name="sourcepackage.SourcePubMagazine"
+		            android:label="@string/app_name" >
+		      <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+		        
+		        <activity
+		            android:name="sourcepackage.SourcePubNewspaper"
+		            android:label="@string/app_name" >
+		      <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+		        
+		        <activity
+		            android:name="sourcepackage.SourceMediaAV"
+		            android:label="@string/app_name" >
+		      <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+		        
+		        <activity
+		            android:name="sourcepackage.SourceMediaTV"
+		            android:label="@string/app_name" >
+		       <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+		        
+		        <activity
+		            android:name="sourcepackage.SourceMediaImage"
+		            android:label="@string/app_name" >
+		       <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+		        
+		        <activity
+		            android:name="sourcepackage.SourceOthersBlog"
+		            android:label="@string/app_name" >
+		       <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+		        
+		        <activity
+		            android:name="sourcepackage.SourceOthersOnlineDisc"
+		            android:label="@string/app_name" >
+		      <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+		        
+		        <activity
+		            android:name="sourcepackage.SourceOthersPodcasts"
+		            android:label="@string/app_name" >
+		       <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+		        
+		        <activity
+		            android:name="sourcepackage.SourceOthersInterview"
+		            android:label="@string/app_name" >
+		       <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+		        
+		        <activity
+		            android:name="sourcepackage.SourceFinalCitation"
+		            android:label="@string/app_name" >
+		       <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+        
+        <!-- ********************************************************************************** -->
+        
+        
+        <!-- ********************************************************************************** -->
+    	<!-- THIS IS FOR THE ACTIVITIES REGARDING THE CITE NOW FEATURE -->
+    	<!-- ********************************************************************************** -->
+        
+		        <activity
+		            android:name="citenowpackage.CiteNowSelectFormatActivity"
+		            android:label="@string/app_name" >
+		      <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+        
+        <!-- ********************************************************************************** -->
+        
+        
+        <!-- ********************************************************************************** -->
+    	<!-- THIS IS FOR THE ACTIVITIES REGARDING THE NEW CITATION PROJECT FEATURE -->
+    	<!-- ********************************************************************************** -->
+    	
+		        <activity
+		            android:name="newcitationprojectpackage.NewCitationProjectActivity"
+		            android:label="@string/app_name" >
+		      <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+		        
+		        <activity
+		            android:name="newcitationprojectpackage.NewCitationProjectListActivity"
+		            android:label="@string/app_name" >
+		       <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+        
+        <!-- ********************************************************************************** -->
+        
+        
+        <!-- ********************************************************************************** -->
+    	<!-- THIS IS FOR THE ACTIVITIES REGARDING THE NEW CITATION PROJECT FEATURE -->
+    	<!-- ********************************************************************************** -->
+    	
+    			<activity
+		            android:name="editcitationproject.EditCitationMyCitationProjects"
+		            android:label="@string/app_name" >
+		       <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+		        
+    			<activity
+		            android:name="editcitationproject.EditCitationCitationProject"
+		            android:label="@string/app_name" >
+		       <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+		        
+    			<activity
+		            android:name="editcitationproject.EditCitationMyCitation"
+		            android:label="@string/app_name" >
+		       <!-- <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+        
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter> -->
+		        </activity>
+    	
+    	<!-- ********************************************************************************** -->
+        
+    </application>
+
+</manifest>

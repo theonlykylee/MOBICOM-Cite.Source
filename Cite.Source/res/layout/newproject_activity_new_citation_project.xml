@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/defaultbg"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_width="270dp"
+        android:layout_height="65dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/titlenewcitation" />
+
+    <EditText
+        android:id="@+id/citationProjectName"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="The name of the project." />
+
+    <Spinner
+        android:id="@+id/formatSelectorSpn"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/citation_formats" />
+    
+    <ImageButton
+        android:id="@+id/confirmNewProjectBtn"
+        android:layout_width="225dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:background="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/selector_confirmnewproject" />
+    
+</LinearLayout>
