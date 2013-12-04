@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+/Users/viancavillacorta/Documents/MOBICOM-Cite.Source/.metadata/.plugins/org.eclipse.jdt.core
+805992339.index
+1772242101.index
