@@ -55,7 +55,7 @@ public class EditCitationMyCitationProjects extends Activity {
                 
                 Intent intent = new Intent(EditCitationMyCitationProjects.this, EditCitationCitationProject.class);
                 
-                /*List<DatabaseCitations> theCites = new ArrayList<DatabaseCitations>();
+                List<DatabaseCitations> theCites = new ArrayList<DatabaseCitations>();
                 theCites = citationsDB.getCitations();
                 String[] theS = new String[theCites.size()];
                 //String projectName;
@@ -63,9 +63,9 @@ public class EditCitationMyCitationProjects extends Activity {
                 for (int i = 0; i < theCites.size(); i++) {
                     theS[i] = theCites.get(i).getCitation();
                 }
-                */
+                
                 intent.putExtra("citationProjectName", selectedItem);
-                //intent.putExtra("citationList", theS);
+                intent.putExtra("citationList", theS);
                 startActivity(intent);
                 
             }

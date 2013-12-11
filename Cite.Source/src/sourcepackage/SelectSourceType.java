@@ -150,6 +150,7 @@ public class SelectSourceType extends FragmentActivity {
 					// TODO Auto-generated method stub
 					Intent intent = new Intent(getActivity(),
 							SourceDocWeb.class);
+					intent.putExtra("sourceType", "Document: Web");
 					intent.putExtra("projectName", projectName);
 					startActivity(intent);
 				}

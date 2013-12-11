@@ -41,6 +41,7 @@ public class CiteNowSelectFormatActivity extends Activity {
 		@Override
 		public void onClick(View b) {
 			Intent intent = new Intent(CiteNowSelectFormatActivity.this, SelectSourceType.class);
+			intent.putExtra("projectName", "");
 			startActivity(intent);
 		}
     	

@@ -24,6 +24,7 @@ public class SourceDocWeb extends Activity {
 	
 	Intent intent;
 	String project;
+	String sourceType;
 	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,8 @@ public class SourceDocWeb extends Activity {
         
         intent = getIntent();
         project = intent.getStringExtra("projectName");
+        sourceType = intent.getStringExtra("sourceType");
+        
         System.out.println("SourceDocWeb");
         System.out.println(project);
     }
@@ -136,6 +139,11 @@ public class SourceDocWeb extends Activity {
 			    toast.show();
 			} else {
 			    intent.putExtra("projectName", project);
+			    intent.putExtra("sourceType", sourceType);
+			    if (!(title.isEmpty()))
+			        intent.putExtra("sourceTitle", title);
+			    else
+			        intent.putExtra("sourceTitle", authorName);
 			    startActivity(intent);
 			}
 			
