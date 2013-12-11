@@ -74,5 +74,11 @@
         <item >Web-based Recording</item>
         <item >Personal Interview</item>
     </string-array>
+    <string-array name="nature_of_contribution">
+        <item >Performer</item>
+        <item >Director</item>
+        <item >Producer</item>
+        <item >Writer</item>
+    </string-array>
 
 </resources>

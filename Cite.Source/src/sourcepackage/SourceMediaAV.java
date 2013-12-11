@@ -68,13 +68,58 @@ public class SourceMediaAV extends Activity {
             String url = webUrl.getText().toString();
             
             if (isEmpty(name)) {
-                citationTxt = "("+year+"). "+title+". "+media+". Retrieved from "+url;
-                intent.putExtra("citationTxt", citationTxt);
-            } else if (isEmpty(year)){
-                citationTxt = name+ " (n.d.). "+title+". "+media+". Retrieved from "+url;
+                if (isEmpty(year)) {
+                    if (isEmpty(title)) {
+                        citationTxt = "Available from "+url;
+                        intent.putExtra("citationTxt", citationTxt);
+                    } else if (isEmpty(url)) {
+                        citationTxt = title+" ["+media+"].";
+                        intent.putExtra("citationTxt", citationTxt);
+                    } else {
+                        citationTxt = title+" ["+media+"]. Available from "+url;
+                        intent.putExtra("citationTxt", citationTxt);
+                    }
+                } else if (isEmpty(title)) {
+                    if (isEmpty(url)) {
+                        citationTxt = "("+year+").";
+                        intent.putExtra("citationTxt", citationTxt);
+                    } else {
+                        citationTxt = "("+year+"). Available from "+url;
+                        intent.putExtra("citationTxt", citationTxt);
+                    }
+                } else if (isEmpty(url)) {
+                    citationTxt = title+" ["+media+"]. ("+year+").";
+                    intent.putExtra("citationTxt", citationTxt);
+                } else {
+                    citationTxt = title+" ["+media+"]. ("+year+"). Available from "+url;
+                    intent.putExtra("citationTxt", citationTxt);
+                }
+            } else if (isEmpty(year)) {
+                if (isEmpty(title)) {
+                    if (isEmpty(url)) {
+                        citationTxt = name+" (n.d.).";
+                        intent.putExtra("citationTxt", citationTxt);
+                    } else {
+                        citationTxt = name+" (n.d.). Available from "+url;
+                        intent.putExtra("citationTxt", citationTxt);
+                    }
+                } else if (isEmpty(url)) {
+                    citationTxt = name+" (n.d.). "+title+" ["+media+"].";
+                    intent.putExtra("citationTxt", citationTxt);
+                } else {
+                    citationTxt = name+ " (n.d.). "+title+" ["+media+"]. Available from "+url;
+                    intent.putExtra("citationTxt", citationTxt);
+                }
+            } else if (isEmpty(title)) {
+                if (isEmpty(url)) {
+                    citationTxt = name+" ("+year+").";
+                    intent.putExtra("citationTxt", citationTxt);
+                }
+            } else if (isEmpty(url)) {
+                citationTxt = name+" ("+year+"). "+title+" ["+media+"].";
                 intent.putExtra("citationTxt", citationTxt);
             } else {
-                citationTxt = name+" ("+year+"). "+title+". "+media+". Retrieved from "+url;
+                citationTxt = name+" ("+year+"). "+title+" ["+media+"]. Available from "+url;
                 intent.putExtra("citationTxt", citationTxt);
             }
             

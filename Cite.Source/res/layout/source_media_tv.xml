@@ -32,6 +32,13 @@
 	        android:ems="10"
 	        android:hint="Name of Contributor" />
 
+        <Spinner
+            android:id="@+id/contributionSpn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:entries="@array/nature_of_contribution" />
+
         <EditText
             android:id="@+id/yearAiredTxt"
             android:layout_gravity="center"
@@ -93,15 +100,14 @@
 	        android:layout_height="wrap_content"
 	        android:ems="10"
 	        android:hint="Broadcast Company" />
-        
+
         <EditText
-	        android:id="@+id/urlTxt"
-	        android:layout_gravity="center"
-	        android:layout_marginTop="10dp"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content"
-	        android:ems="10"
-	        android:hint="Web URL" />
+            android:id="@+id/urlTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:hint="Web URL" />
         
         <ImageButton
 	        android:id="@+id/imdoneBtn"

@@ -64,13 +64,43 @@ EditText webUrl;
 			String url = webUrl.getText().toString();
 			
 			if (isEmpty(name)) {
-			    citationTxt = "("+year+"). "+title+". Retrieved from "+url;
-			    intent.putExtra("citationTxt", citationTxt);
+			    if (isEmpty(year)){
+			        citationTxt = "[Web log message]. Retrieved from "+url;
+			        intent.putExtra("citationTxt", citationTxt);
+			    } else if (isEmpty(title)) {
+			        citationTxt = "[Web log message]. ("+year+"). Retrieved from "+url;
+			        intent.putExtra("citationTxt", citationTxt);
+			    } else if (isEmpty(url)) {
+			        citationTxt = "[Web log message]. ("+year+").";
+			        intent.putExtra("citationTxt", citationTxt);
+			    } else {
+    			    citationTxt = "[Web log message]. ("+year+"). "+title+". Retrieved from "+url;
+    			    intent.putExtra("citationTxt", citationTxt);
+			    }
 			} else if (isEmpty(year)) {
-			    citationTxt = name+" (n.d.). "+title+". Retrieved from "+url;
+			    if (isEmpty(title)) {
+			        citationTxt = name+" [Web log message]. Retrieved from "+url;
+			        intent.putExtra("citationTxt", citationTxt);
+			    } else if (isEmpty(url)) {
+			        citationTxt = name+" [Web log message].";
+			        intent.putExtra("citationTxt", citationTxt);
+			    } else {
+    			    citationTxt = name+" [Web log message]. "+title+". Retrieved from "+url;
+    			    intent.putExtra("citationTxt", citationTxt);
+			    }
+			} else if (isEmpty(title)) {
+			    if (isEmpty(url)) {
+			        citationTxt = name+" ("+year+"). [Web log message].";
+			        intent.putExtra("citationTxt", citationTxt);
+			    } else {
+    			    citationTxt = name+" ("+year+"). [Web log message]. Retrieved from "+url;
+    			    intent.putExtra("citationTxt", citationTxt);
+			    }
+			} else if (isEmpty(url)) {
+			    citationTxt = name+" ("+year+"). [Web log message].";
 			    intent.putExtra("citationTxt", citationTxt);
 			} else {
-			    citationTxt = name+" ("+year+"). "+title+". Retrieved from "+url;
+			    citationTxt = name+" ("+year+"). [Web log message]. Retrieved from "+url;
 			    intent.putExtra("citationTxt", citationTxt);
 			}
 			

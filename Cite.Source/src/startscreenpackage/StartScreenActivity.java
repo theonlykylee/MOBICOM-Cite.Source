@@ -1,6 +1,11 @@
 package startscreenpackage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import newcitationprojectpackage.NewCitationProjectActivity;
+import sqlitePackage.DatabaseCitations;
+import sqlitePackage.DatabaseCitations_DAO;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +13,6 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
-
 import citenowpackage.CiteNowSelectFormatActivity;
 
 import com.gsm.cite.source.R;
@@ -20,6 +24,8 @@ public class StartScreenActivity extends Activity {
 	ImageButton btnCiteNow;
 	ImageButton btnNewCitationProject;
 	ImageButton btnEditCitationProject;
+	
+	DatabaseCitations_DAO theCitations;
 	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +39,7 @@ public class StartScreenActivity extends Activity {
         btnCiteNow.setOnClickListener(new btnCiteNowListener());
         btnNewCitationProject.setOnClickListener(new btnNewCitationProjectListener());
         btnEditCitationProject.setOnClickListener(new btnEditCitationProjectListener());
+        theCitations = new DatabaseCitations_DAO(this);
     }
 
 
@@ -70,6 +77,17 @@ public class StartScreenActivity extends Activity {
 		@Override
 		public void onClick(View c) {
 			Intent intent = new Intent(StartScreenActivity.this, EditCitationMyCitationProjects.class);
+			
+			List<DatabaseCitations> theCites = new ArrayList<DatabaseCitations>();
+			theCites = theCitations.getCitations();
+			String[] theS = new String[theCites.size()];
+			//String projectName;
+			
+			for (int i = 0; i < theCites.size(); i++) {
+			    theS[i] = theCites.get(i).getProjectName();
+			}
+			
+			intent.putExtra("theSList", theS);
 			startActivity(intent);
 		}
     	

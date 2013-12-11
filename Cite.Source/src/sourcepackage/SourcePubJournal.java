@@ -85,10 +85,15 @@ public class SourcePubJournal extends Activity {
             }*/
 
             if (isEmpty(name)) {
-                citationTxt = "(" + year + "). " + titleOfArticle + ". "
-                        + titleOfPeriodical + ", " + volNo + "(" + issueNo
-                        + "), " + pageNo + ". doi: " + doiNo;
-                intent.putExtra("citationTxt", citationTxt);
+                if (isEmpty(year)) {
+                    citationTxt = "(n.d.). "+titleOfArticle+". "+titleOfPeriodical+", "+volNo+" ("+issueNo+"), "+pageNo+". doi: "+doiNo;
+                    intent.putExtra("citationTxt", citationTxt);
+                } else {
+                    citationTxt = "(" + year + "). " + titleOfArticle + ". "
+                            + titleOfPeriodical + ", " + volNo + "(" + issueNo
+                            + "), " + pageNo + ". doi: " + doiNo;
+                    intent.putExtra("citationTxt", citationTxt);
+                }
             } else if (isEmpty(year)) {
                 citationTxt = name + " (n.d.). " + titleOfArticle + ". "
                         + titleOfPeriodical + ", " + volNo + "(" + issueNo

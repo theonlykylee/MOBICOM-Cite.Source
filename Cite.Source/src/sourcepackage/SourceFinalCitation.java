@@ -1,5 +1,6 @@
 package sourcepackage;
 
+import sqlitePackage.DatabaseCitations_DAO;
 import startscreenpackage.StartScreenActivity;
 import android.app.Activity;
 import android.content.Intent;
@@ -13,25 +14,31 @@ import android.widget.TextView;
 import com.gsm.cite.source.R;
 
 public class SourceFinalCitation extends Activity {
-ImageButton btnHome;
-TextView citationTextView;
-Intent intent;
+    ImageButton btnHome;
+    TextView citationTextView;
+    Intent intent;
+    
+    DatabaseCitations_DAO citationsDB;
 
-	protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.source_final);
-        
+
         btnHome = (ImageButton) findViewById(R.id.homeBtn);
         citationTextView = (TextView) findViewById(R.id.citationTxt);
         intent = getIntent();
+        citationsDB = new DatabaseCitations_DAO(this);
 
         String citation = intent.getStringExtra("citationTxt");
+        String project = intent.getStringExtra("projectName");
         
+        System.out.println("SourceFinalCitation");
+        System.out.println(project);
+
         citationTextView.setText(citation);
         btnHome.setOnClickListener(new btnHomeListener());
-        
-    }
 
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -39,17 +46,21 @@ Intent intent;
         getMenuInflater().inflate(R.menu.start_screen, menu);
         return true;
     }
-    
+
     // THESE ARE THE LISTENERS FOR THE BUTTONS
-    
+
     class btnHomeListener implements OnClickListener {
 
-		@Override
-		public void onClick(View a) {
-			Intent intent = new Intent(SourceFinalCitation.this, StartScreenActivity.class);
-			startActivity(intent);
-		}
-    	
+        @Override
+        public void onClick(View a) {
+            Intent intent = new Intent(SourceFinalCitation.this,
+                    StartScreenActivity.class);
+            
+           
+            
+            startActivity(intent);
+        }
+
     }
 
 }

@@ -24,6 +24,8 @@ public class SelectSourceType extends FragmentActivity {
 	SectionsPagerAdapter mSectionsPagerAdapter;
 
 	ViewPager mViewPager;
+	Intent intent;
+	String projectName;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,11 @@ public class SelectSourceType extends FragmentActivity {
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mSectionsPagerAdapter);
 		mViewPager.setPageTransformer(true, new ZoomOutPageTransformer());
+		
+		intent = getIntent();
+		projectName = intent.getStringExtra("projectName");
+		System.out.println("SelectSourceType----");
+		System.out.println(projectName);
 
 	}
 
@@ -143,6 +150,7 @@ public class SelectSourceType extends FragmentActivity {
 					// TODO Auto-generated method stub
 					Intent intent = new Intent(getActivity(),
 							SourceDocWeb.class);
+					intent.putExtra("projectName", projectName);
 					startActivity(intent);
 				}
 

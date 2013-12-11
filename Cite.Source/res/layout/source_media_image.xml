@@ -46,8 +46,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:ems="10"
-            android:hint="Date Posted/Produced"
-            android:inputType="date" />
+            android:hint="Date Posted/Produced" />
 
         <EditText
             android:id="@+id/titleTxt"

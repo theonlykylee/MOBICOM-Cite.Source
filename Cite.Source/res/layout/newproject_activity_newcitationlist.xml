@@ -17,8 +17,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
-        android:text="Research 1"
         android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Research 1"
         android:textSize="35dp"
         android:textColor="#a06c21"
         android:textStyle="bold" />
